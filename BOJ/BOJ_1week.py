@@ -1,4 +1,4 @@
-# # 2885
+# # 2885_곱셈
 # def mul(a, b):
 #     tmp = []
 #     for i in b[::-1]:
@@ -8,7 +8,7 @@
 # b = input()
 # print(mul(a, b))
 
-# # 2884
+# # 2884_알람 시계
 # def alarm(h, m):
 #     if m < 45:
 #         h -= 1
@@ -21,7 +21,7 @@
 # h, m = map(int, input().split())
 # alarm(h, m)
 
-# # 14681
+# # 14681_사분면 고르기
 # def quadrant(x, y):
 #     if x > 0:
 #         if y > 0:
@@ -37,7 +37,7 @@
 # b = int(input())
 # print(quadrant(a, b))
 
-# # 1330
+# # 1330_ 두 수 비교하기
 # def compare(a, b):
 #     if a > b:
 #         return '>'
@@ -48,14 +48,14 @@
 # a, b = map(int, input().split())
 # print(compare(a, b))
 
-# # 2739
+# # 2739_구구단
 # def gugudan(n):
 #     for i in range(1, 10):
 #         print(f'{n} * {i} = {n*i}')
 # n = int(input())
 # gugudan(n)
 
-# # 10871
+# # 10871_X보다 작은 수
 # def less_num(x, seq):
 #     tmp = ''
 #     for i in seq:
@@ -66,7 +66,7 @@
 # seq = input().split()
 # print(less_num(x, seq))
 
-# # 1110
+# # 1110_더하기 사이클
 # def plus_cycle(n):
 #     cnt = 0
 #     ori_n = n
@@ -79,14 +79,14 @@
 # n = int(input())
 # print(plus_cycle(n))
 
-# # 10818
+# # 10818_최소, 최대
 # def min_max(x):
 #     print(min(x), max(x))
 # a = input()
 # b = tuple(map(int, input().split()))
 # min_max(b)
 
-# # 2562
+# # 2562_최댓값
 # def maxi(numbers):
 #     print(max(numbers))
 #     print(numbers.index(max(numbers)) + 1)
@@ -95,19 +95,58 @@
 #     tmp.append(int(input()))
 # maxi(tmp)
 
-# 8958
-def OX(res):
-    cnt = 0
-    scores = []
-    for i in res:
-        if i == 'O':
-            cnt += 1
-            scores.append(cnt)
-        else:
-            cnt = 0
-    return sum(scores)s
-a = int(input())
-result = []
-for _ in range(a):
-    res = input()
-    print(OX(res))
+# # 8958_OX퀴즈
+# def OX(res):
+#     cnt = 0
+#     scores = []
+#     for i in res:
+#         if i == 'O':
+#             cnt += 1
+#             scores.append(cnt)
+#         else:
+#             cnt = 0
+#     return sum(scores)
+# a = int(input())
+# result = []
+# for _ in range(a):
+#     res = input()
+#     print(OX(res))
+
+# # 2908_상수
+# a, b = input().split()
+# a = int(a[::-1])
+# b = int(b[::-1])
+# if a > b:
+#     print(a)
+# else:
+#     print(b)
+
+# # 4153_직각삼각형
+# while True:
+#     nums = list(map(int, input().split()))
+#     a = nums.pop(nums.index(min(nums)))
+#     c = nums.pop(nums.index(max(nums)))
+#     b = nums[0]
+#     if not (a or b or c):
+#         break
+#     if a*a + b*b == c*c:
+#         print('right')
+#     else:
+#         print('wrong')
+
+# # 4344_평균은 넘겠지
+# C = int(input())
+# for _ in range(C):
+#     tc = list(map(int, input().split()))
+#     N = tc.pop(0)
+#     mean = sum(tc) / len(tc)
+#     up = len([i for i in tc if i > mean])    # 평균 넘는 사람 수
+#     per = 100 * up / len(tc)
+#     print(f'{per:.3f}%')
+
+# # 10809_알파벳 찾기
+# S = input()
+# alphabet = 'abcdefghijklmnopqrstuvwxyz'
+# tmp = [str(S.find(c)) for c in alphabet]
+# print(' '.join(tmp))
+
