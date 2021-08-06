@@ -150,3 +150,51 @@
 # tmp = [str(S.find(c)) for c in alphabet]
 # print(' '.join(tmp))
 
+# # 1978_소수찾기
+# def isprime(n):
+#     if n == 1:
+#         return 0
+#     cnt = 0
+#     for i in range(1, n+1):
+#         if not (n % i):
+#             cnt += 1
+#             if cnt > 2: return 0
+#     return 1
+# N = int(input())
+# numbers = list(map(int, input().split()))
+# cnt = 0
+# for i in numbers:
+#     if isprime(i):
+#         cnt += 1
+# print(cnt)
+
+# -----------------------------------------------------------------
+
+# # 4673_셀프 넘버
+# def selfnumber(num):
+#     if num >= 10000:
+#         return 
+#     number = num
+#     while num > 0:
+#         number += num%10
+#         num = num//10
+#     return selfnumber(number)
+# print(selfnumber(1))
+
+# 1712_손익분기점
+# a + bx < cx
+# a < x(c-b)
+# if c > b: a/(c-b) < x
+# if c < b: a/(c-b) > x
+# a, b, c = map(int, input().split())
+# x = 1
+# while x <= int(21e8):
+#     if a + b*x < c*x:
+#         break
+#     else:
+#         x += 1
+# if x > int(21e8):
+#     print(-1)
+# else:
+#     print(x)
+
