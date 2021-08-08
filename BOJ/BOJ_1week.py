@@ -177,33 +177,19 @@
 #     if not Y: print(100 * h + X)
 #     else: print(100 * Y + X + 1)
 
-# -----------------------------------------------------------------
+# # 1712_손익분기점
+# A, B, C = map(int, input().split())
+# if C <= B: print(-1)
+# else: print(A // (C-B) + 1)
 
 # # 4673_셀프 넘버
-# def selfnumber(num):
-#     if num >= 10000:
-#         return 
-#     number = num
-#     while num > 0:
-#         number += num%10
-#         num = num//10
-#     return selfnumber(number)
-# print(selfnumber(1))
-
-# 1712_손익분기점
-# a + bx < cx
-# a < x(c-b)
-# if c > b: a/(c-b) < x
-# if c < b: a/(c-b) > x
-# a, b, c = map(int, input().split())
-# x = 1
-# while x <= int(21e8):
-#     if a + b*x < c*x:
-#         break
-#     else:
-#         x += 1
-# if x > int(21e8):
-#     print(-1)
-# else:
-#     print(x)
-
+# def d(num):
+#     for i in str(num):
+#         num += int(i)
+#     return num
+# self_num = [i for i in range(1, 10001)]
+# for j in range(1, 9974):
+#     try: self_num.remove(d(j))
+#     except: pass
+# for num in self_num:
+#     print(num)
