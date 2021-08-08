@@ -168,6 +168,15 @@
 #         cnt += 1
 # print(cnt)
 
+# # 10250_ACM호텔
+# T = int(input())
+# for _ in range(T):
+#     h, w, n = map(int, input().split())
+#     Y, X = n % h, n // h
+#     # Y == 0 (꼭대기층)
+#     if not Y: print(100 * h + X)
+#     else: print(100 * Y + X + 1)
+
 # -----------------------------------------------------------------
 
 # # 4673_셀프 넘버
