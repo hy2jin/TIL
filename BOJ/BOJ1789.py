@@ -1,3 +1,9 @@
 # BOJ 1789 수들의 합
 S = int(input())
-# 접근 방법조차 모르겠네....뭘 어쩌란거야...
+tmp = 0
+for i in range(1, S):
+    tmp += i
+    if tmp > S:
+        i -= 1
+        break
+print(i)
