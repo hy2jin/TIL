@@ -54,6 +54,8 @@
   <p>{{ 'ABC'|lower }}</p>
   <p>{{ 'you need python'|title }}</p>
   <p>{{ foods|random }}</p>
+  <p>{{ 'hello'|length }}</p>
+  <p>{{ today|date:"Y년 m월 d일 (D) a h:i" }}</p>
   <hr>
 
   <h3>6. 연산</h3>
@@ -66,7 +68,7 @@
   {% now "DATETIME_FORMAT" %} <br>
   {% now "SHORT_DATETIME_FORMAT" %} <br>
   <hr>
-  {% now "Y년 m월 d일 (D) h:i" %}
+  {% now "Y년 m월 d일 (D) a h:i" %}
   <hr>
   {% now "Y" as current_year %}
   Copyright {{ current_year }}
