@@ -4,9 +4,9 @@ sys.stdin = open('input.txt')
 dic = {'(': ')', '[': ']'}
 while True:
     string = input()
-    stack = []
     if string == '.':
         break
+    stack = []
     ans = 'no'
     for s in string:
         if s == '(' or s == '[':
@@ -17,9 +17,7 @@ while True:
             p = stack.pop()
             if s != dic[p]:
                 break
-        if s == '.':
-            if stack:
-                break
     else:
-        ans = 'yes'
+        if not stack:
+            ans = 'yes'
     print(ans)
