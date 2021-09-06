@@ -19,6 +19,27 @@ from .models import Article
 #     region = forms.ChoiceField(choices=REGION_CHOICES, widget=forms.Select)
 
 class ArticleForm(forms.ModelForm):
+    title = forms.CharField(
+        label='제목',
+        widget=forms.TextInput(
+            attrs={
+                'class': 'my-title',
+                'placeholder': 'Enter the title',
+                'maxlength': 10,
+            }
+        )
+    )
+    content = forms.CharField(
+        label='내용',
+        widget=forms.Textarea(
+            attrs={
+                'class': 'my-content',
+                'placeholder': 'Enter the content',
+                'rows': 5,
+                'cols': 50,
+            }
+        )
+    )
 
     class Meta:
         model = Article
