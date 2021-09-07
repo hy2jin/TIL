@@ -31,7 +31,11 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    # local app
     'articles',
+    # 3rd party library
+    'bootstrap5',
+    # dajngo app
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
