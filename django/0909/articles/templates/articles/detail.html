@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load bootstrap5 %}
+
+{% block title %}
+  DETAIL
+{% endblock title %}
+
+{% block content %}
+  <h1>DETAIL PAGE</h1>
+  <p>{{ article.pk }}번 째 글</p>
+  <p>제목 : {{ article.title }}</p>
+  <!-- __str__ 설정으로 title이 나오도록 했으니 앞으로는 article로 출력하자? X -->
+  <!-- 명확하게 표기해 줘야 함-->
+  <!-- <p>제목? : {{ article }}</p> -->
+  <p>내용 : {{ article.content }}</p>
+  <!-- image가 있을 때만, 없을때 오류나지 않도록 하기 위해서 -->
+  {% if article.image %}
+    <p>{{ article.image.url }}</p>
+    <!-- <img src="https://www.ssafy.com/swp/images/sns_img.png" alt="{{ article.image }}"> -->
+    <img src="{{ article.image.url }}" alt="{{ article.image }}">
+  {% endif %}
+  <p>생성 시각 : {{ article.created_at }}</p>
+  <p>수정 시각 : {{ article.updated_at }}</p>
+  <a href="{% url 'articles:index' %}">INDEX</a>
+  <a href="{% url 'articles:update' article.pk %}">UPDATAE</a>
+  <form action="{% url 'articles:delete' article.pk %}" method="POST">
+    {% csrf_token %}
+    <!-- <button class="btn btn-danger">DELETE</button> -->
+    {% bootstrap_button "DELETE" button_type="submit" button_class="btn-danger" %}
+  </form>
+{% endblock content %}
