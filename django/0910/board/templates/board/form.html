@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load bootstrap5 %}
+{% block content %}
+
+<form action="" method="POST">
+  {% csrf_token %}
+  {% comment %} {{ form.as_p }} {% endcomment %}
+  {% bootstrap_form form %}
+  <input type="checkbox">
+  <button>제출</button>
+
+</form>
+
+{% endblock content %}
