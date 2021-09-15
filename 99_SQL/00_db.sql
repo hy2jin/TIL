@@ -45,7 +45,7 @@ VALUES ('홍길동', 30, '서울');
 INSERT INTO classmates VALUES ('홍길동', 30, '서울');
 
 -- 조회시, 필요한 column 같이 생성
--- rowid 컬럼을 포함ㅁ한 다른 모든 컬럼
+-- rowid 컬럼을 포함한 다른 모든 컬럼
 SELECT rowid, * FROM classmates;
 
 -- id와 NOT NULL을 포함한 table 생성
