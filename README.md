@@ -1,1 +1,10 @@
-혼자 하는 공부
+# 혼자 공부중...
+
+- `.gitignore`
+
+  - windows, macos
+  - python, pycharm, visualStudioCode
+  - django, venv, node, vue, vuejs, react, yarn
+
+  
+
