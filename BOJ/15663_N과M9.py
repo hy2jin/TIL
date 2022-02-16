@@ -1,4 +1,4 @@
-# BOJ N과 M (8)
+# BOJ N과 M (9)
 import sys
 sys.stdin = open('input.txt')
 
