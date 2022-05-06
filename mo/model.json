@@ -3,6 +3,28 @@
 	"generatedBy": "2.8.0",
 	"convertedBy": "TensorFlow.js Converter v3.15.0",
 	"signature": {
+		"inputs": {
+      "input_tensor:0": {
+        "name": "input_tensor:0",
+        "dtype": "DT_UINT8",
+        "tensorShape": {
+          "dim": [
+            {
+              "size": "1"
+            },
+            {
+              "size": "-1"
+            },
+            {
+              "size": "-1"
+            },
+            {
+              "size": "3"
+            }
+          ]
+        }
+      }
+    },
 		"outputs": {
 			"Identity": {
 				"name": "Identity"
