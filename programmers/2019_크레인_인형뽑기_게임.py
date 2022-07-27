@@ -22,3 +22,23 @@ def solution(board, moves):
                 ans += cnt
                 break
     return ans
+
+####################################################
+
+def solution(board, moves):
+    lst = []
+    ans = 0
+
+    for i in moves:
+        c = i - 1
+        for n in range(len(board)):
+            if board[n][c]:
+                lst.append(board[n][c])
+                board[n][c] = 0
+                
+                if len(lst) > 1 and lst[-1] == lst[-2]:
+                    lst.pop()
+                    lst.pop()
+                    ans += 2
+                break
+    return ans
