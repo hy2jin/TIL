@@ -1,0 +1,23 @@
+-- 타입에 따라 각각 몇바리인지 구하기
+-- 단 고양이를 개보다 먼저 조회하기
+SELECT ANIMAL_TYPE, COUNT(ANIMAL_TYPE)
+FROM ANIMAL_INS
+GROUP BY ANIMAL_TYPE
+ORDER BY ANIMAL_TYPE;
+
+-- 이름이 두번 이상 쓰인 이름과 해당 이름이 쓰인 횟수 조회하기
+-- 단 이름이 없는 동물은 집계에서 제외하고, 이름순으로 정렬하기
+SELECT NAME, COUNT(NAME)
+FROM ANIMAL_INS
+WHERE NAME IS NOT NULL
+GROUP BY NAME
+HAVING COUNT(NAME) > 1
+ORDER BY NAME;
+
+-- 9시부터 19시59분까지 각 시간대별로 입양이 몇건 발생했는지 조회
+-- 단, 시간대 순으로 정렬하기
+SELECT HOUR(DATETIME), COUNT(DATETIME)
+FROM ANIMAL_OUTS
+WHERE HOUR(DATETIME) >= 9 AND HOUR(DATETIME) <= 19
+GROUP BY HOUR(DATETIME)
+ORDER BY HOUR(DATETIME)
