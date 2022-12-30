@@ -1,6 +1,7 @@
 import sys
 sys.stdin = open("input.txt")
 
+"""
 N = int(input())
 cards = list(map(int, input().split()))
 cards.sort()
@@ -24,4 +25,16 @@ def binary_search(n):
 ans = []
 for n in nums:
     binary_search(n)
+print(*ans)
+"""
+
+_ = input()
+cards = set(input().split())
+_ = input()
+nums = input().split()
+
+ans = []
+for n in nums:
+    ans.append(1) if n in cards else ans.append(0)
+
 print(*ans)
