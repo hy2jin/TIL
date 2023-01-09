@@ -601,6 +601,8 @@ $RECYCLE.BIN/
 *.msm
 *.msp
 
+extensions.json
+
 # Windows shortcuts
 *.lnk
 
