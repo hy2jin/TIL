@@ -5,6 +5,7 @@ function printName(person: { first: string; last: string }): void {
 
 printName({ first: "Thomas", last: "Jenkins" });
 
+// printName({ first: "Mick", last: "Jagger", age: 473, isAlive: true })  // Error
 const singer = { first: "Mick", last: "Jagger", age: 473, isAlive: true };
 printName(singer);
 
