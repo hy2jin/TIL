@@ -1,4 +1,4 @@
-https://www.acmicpc.net/problem/28432
+# https://www.acmicpc.net/problem/28432
 
 N = int(input())
 arr = []
